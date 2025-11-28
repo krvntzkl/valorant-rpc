@@ -1,0 +1,10 @@
+__pycache__/
+.vscode/
+build/
+dist/
+.env
+config.json
+installer/ 
+RiotUser.cs
+/venv/
+.idea
