@@ -27,8 +27,6 @@
 
  
  <a>
-    <img src="assets/Demo1.png" alt="Demo" width="205" height="112">
-    <img src="assets/Demo2.png" alt="Demo" width="205" height="112">
 
  </a>
 
@@ -36,7 +34,7 @@
  
 ## Installation
 
- - Download the latest [release](https://github.com/tubxi/valorant-rpc/releases/latest/download/valorant-rpc.exe) and run it.
+ - Download the latest [release](https://github.com/krvntzkl/valorant-rpc/releases/latest/download/valorant-rpc.exe) and run it.
 
  
  
@@ -67,19 +65,14 @@
 [discord-shield]: https://img.shields.io/discord/938509236906917982?color=7289da&label=Support&logo=discord&logoColor=7289da&style=for-the-badge
 [discord-url]: https://discord.gg/8SRNkCGDjk
 [discord-banner]: https://discordapp.com/api/guilds/938509236906917982/widget.png?style=banner2
-[license-shield]: https://img.shields.io/github/license/tubxi/valorant-rpc?style=for-the-badge
-[license-url]: https://github.com/tubxi/valorant-rpc/blob/v3/LICENSE.txt
+[license-shield]: https://img.shields.io/github/license/krvntzkl/valorant-rpc?style=for-the-badge
+[license-url]: https://github.com/krvntzkl/valorant-rpc/blob/v3/LICENSE.txt
 
-[stars-shield]: https://img.shields.io/github/stars/tubxi/valorant-rpc?logo=github&style=for-the-badge
-[stars-url]: https://github.com/tubxi/valorant-rpc/stargazers
+[stars-shield]: https://img.shields.io/github/stars/krvntzkl/valorant-rpc?logo=github&style=for-the-badge
+[stars-url]: https://github.com/krvntzkl/valorant-rpc/stargazers
 
-[releases-shield]: https://img.shields.io/github/downloads/tubxi/valorant-rpc/total?style=for-the-badge
-[releases-url]: https://github.com/tubxi/valorant-rpc/releases
+[releases-shield]: https://img.shields.io/github/downloads/krvntzkl/valorant-rpc/total?style=for-the-badge
+[releases-url]: https://github.com/krvntzkl/valorant-rpc/releases
 
-[language-shield]: https://img.shields.io/github/languages/top/tubxi/valorant-rpc?logo=python&logoColor=yellow&style=for-the-badge
+[language-shield]: https://img.shields.io/github/languages/top/krvntzkl/valorant-rpc?logo=python&logoColor=yellow&style=for-the-badge
 [language-url]: https://www.python.org/
-
-[kofi-shield]: https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white
-[kofi-url]: https://ko-fi.com/tubix
-
-
