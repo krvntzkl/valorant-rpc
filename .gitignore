@@ -8,3 +8,6 @@ installer/
 RiotUser.cs
 /venv/
 .idea
+
+# Scripts PowerShell de déploiement
+*.ps1
