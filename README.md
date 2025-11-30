@@ -1,16 +1,15 @@
-```
- _   _____   __   ____  ___  ___   _  ________                
-| | / / _ | / /  / __ \/ _ \/ _ | / |/ /_  __/__________  ____
-| |/ / __ |/ /__/ /_/ / , _/ __ |/    / / / /___/ __/ _ \/ __/
-|___/_/ |_/____/\____/_/|_/_/ |_/_/|_/ /_/     /_/ / .__/\__/ 
-                                                  /_/         
-```
+
+<img width="3891" height="494" alt="Valorant-RPC-Logo" src="https://github.com/user-attachments/assets/54ee4098-9206-4649-816f-ee463233fa98" />
+
+
 [![Discord][discord-shield]][discord-url]
 [![Stars][stars-shield]][stars-url]
 [![Releases][releases-shield]][releases-url]
-[![Kofi][kofi-shield]][kofi-url]
 [![Language][language-shield]][language-url]
 [![License][license-shield]][license-url]
+
+ 
+## Shortcut
 
   <ol>  
     <li><a href="#about">About</li>
