@@ -1,7 +1,7 @@
 VSVersionInfo(
     ffi=FixedFileInfo(
-        filevers=(3, 4, 2, 0),
-        prodvers=(3, 4, 2, 0),
+        filevers=(3, 5, 1, 0),
+        prodvers=(3, 5, 1, 0),
         mask=0x3f,
         flags=0x0,
         OS=0x4,
@@ -13,10 +13,10 @@ VSVersionInfo(
             u'040904B0',
             [StringStruct(u'CompanyName', u'Colin Hartigan'),
              StringStruct(u'FileDescription', u'VALORANT rich presence client'),
-             StringStruct(u'FileVersion', u'3.4.2'),
-             StringStruct(u'InternalName', u'rpcclient'),
+             StringStruct(u'FileVersion', u'3.5.1'),
+             StringStruct(u'InternalName', u'valorant-rpc'),
              StringStruct(u'LegalCopyright', u'Colin Hartigan'),
              StringStruct(u'OriginalFilename', u'valorant-rpc.exe'),
-             StringStruct(u'ProductName', u'VALORANT-rpc'),
-             StringStruct(u'ProductVersion', u'3.4.2')])]),
+             StringStruct(u'ProductName', u'valorant-rpc'),
+             StringStruct(u'ProductVersion', u'3.5.1')])]),
         VarFileInfo([VarStruct(u'Translation', [1033, 1200])])])

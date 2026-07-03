@@ -46,8 +46,7 @@ class Startup:
             Logger.debug(self.config)
             self.client = None                
 
-            if Localizer.get_config_value("region",0) == "": # try to autodetect region on first launch
-                self.check_region() 
+
 
             ctypes.windll.kernel32.SetConsoleTitleW(f"valorant-rpc {Localizer.get_config_value('version')}") 
 
@@ -108,12 +107,23 @@ class Startup:
         self.systray_thread.start()
 
     def setup_client(self):
-        try:
-            self.client = valclient.Client(region=Localizer.get_config_value("region",0))
-            self.client.activate()
-            self.presence.client = self.client
-        except:
+        region = Localizer.get_config_value("region", 0)
+        if region == "":
             self.check_region()
+            return
+            
+        self.client = valclient.Client(region=region)
+        retries = 0
+        while retries < 30:
+            try:
+                self.client.activate()
+                self.presence.client = self.client
+                return
+            except Exception:
+                time.sleep(1)
+                retries += 1
+        
+        self.check_region()
 
     def wait_for_presence(self):
         presence_timeout = Localizer.get_config_value("startup","presence_timeout")
@@ -158,7 +168,14 @@ class Startup:
     def check_region(self):
         color_print([("Red bold",Localizer.get_localized_text("prints","startup","autodetect_region"))])
         client = valclient.Client(region="na")
-        client.activate()
+        retries = 0
+        while retries < 30:
+            try:
+                client.activate()
+                break
+            except Exception:
+                time.sleep(1)
+                retries += 1
         sessions = client.riotclient_session_fetch_sessions()
         for _,session in sessions.items():
             if session["productId"] == "valorant":

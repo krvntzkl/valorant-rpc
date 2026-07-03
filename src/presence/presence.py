@@ -1,6 +1,7 @@
+from src.presence.presence_utilities import Utilities
 from pypresence import Presence as PyPresence
 from pypresence.exceptions import InvalidPipe
-import time, sys, traceback, os, ctypes, asyncio, websockets, json, base64, ssl
+import time, sys, traceback, os, ctypes, asyncio, websockets, json, base64, ssl, requests
 
 ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
 ssl_context.check_hostname = False
@@ -223,6 +224,11 @@ class Presence:
             self.main_loop()
 
                     
+        except requests.exceptions.ConnectionError:
+            user32.ShowWindow(hWnd, 1)
+            kernel32.SetConsoleMode(kernel32.GetStdHandle(-10), (0x4|0x80|0x20|0x2|0x10|0x1|0x40|0x100))
+            print("VALORANT has been closed.")
+            os._exit(0)
         except Exception as e:
             user32.ShowWindow(hWnd, 1)
             kernel32.SetConsoleMode(kernel32.GetStdHandle(-10), (0x4|0x80|0x20|0x2|0x10|0x1|0x40|0x100))

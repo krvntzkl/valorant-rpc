@@ -58,10 +58,16 @@ tmp_ret = collect_all('pystray')
 datas += tmp_ret[0]
 binaries += tmp_ret[1]
 hiddenimports += tmp_ret[2]
+import certifi
 tmp_ret = collect_all('PIL')
 datas += tmp_ret[0]
 binaries += tmp_ret[1]
 hiddenimports += tmp_ret[2]
+from PyInstaller.utils.hooks import copy_metadata
+
+datas.append(('cacert.pem', '.'))
+datas += copy_metadata('prompt_toolkit')
+
 
 a = Analysis(
     ['main.py'],

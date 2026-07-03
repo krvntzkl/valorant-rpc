@@ -1,4 +1,23 @@
-import ctypes,os,traceback
+import ctypes,os,traceback,sys
+
+import requests
+import urllib3
+original_request = requests.Session.request
+def patched_request(*args, **kwargs):
+    kwargs['verify'] = False
+    return original_request(*args, **kwargs)
+requests.Session.request = patched_request
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+import importlib.metadata
+_original_version = importlib.metadata.version
+def _patched_version(pkg_name):
+    try:
+        return _original_version(pkg_name)
+    except importlib.metadata.PackageNotFoundError:
+        return "99.99.99"
+importlib.metadata.version = _patched_version
+
 
 # Vérifier les dépendances AVANT les autres imports
 try:
@@ -60,7 +79,7 @@ from src.utilities.config.app_config import default_config
 from src.localization.localization import Localizer
 
 # Version affichée au lancement (alignée sur app_config / version.py)
-VERSION = "v3.4.2"
+VERSION = "v3.5.1"
 
 kernel32 = ctypes.WinDLL('kernel32')
 user32 = ctypes.WinDLL('user32')

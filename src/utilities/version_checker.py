@@ -10,7 +10,12 @@ class Checker:
             current_version = Localizer.get_config_value("version")
             data = requests.get("https://api.github.com/repos/krvntzkl/valorant-rpc/releases/latest")
             latest = data.json()["tag_name"]
-            if latest != current_version:
+            
+            # Simple semver comparison
+            def parse_ver(v):
+                return [int(x) for x in v.strip("vV").split(".") if x.isdigit()]
+                
+            if parse_ver(latest) > parse_ver(current_version):
                 color_print([("Yellow bold",f"({current_version} -> {latest}) {Localizer.get_localized_text('prints','version_checker','update_available')} "),("Cyan underline",f"https://github.com/krvntzkl/valorant-rpc/releases/tag/{latest}")])
-        except:
+        except Exception:
             color_print([("Yellow bold",Localizer.get_localized_text("prints","version_checker","checker_error"))])
